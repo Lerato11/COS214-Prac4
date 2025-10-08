@@ -6,8 +6,8 @@
 
 class TicketInformation {
     private: 
-        std::string info;
         std::string id;
+        std::string info;
 
     public:
         TicketInformation();

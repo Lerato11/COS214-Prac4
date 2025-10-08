@@ -7,14 +7,11 @@
 #include "Support.h"
 
 class FinanceSupport : public Support
-{
-private:
-
-protected:
-    void support(TicketLeaf* ticket);
+{    
 
 public:
     FinanceSupport();
+    void support(TicketLeaf* ticket);
 };
 
 

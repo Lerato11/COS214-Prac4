@@ -11,6 +11,7 @@ class TicketCommand {
         TicketCommand();
         virtual void execute(std::string id, std::string info) = 0;
         virtual std::string getType() = 0;
+        virtual ~TicketCommand();
 };
 
 #endif

@@ -8,13 +8,11 @@
 
 class TechSupport : public Support
 {
-private:
-
-protected:
-    void support(TicketLeaf* ticket);
+    
 
 public:
     TechSupport();
+    void support(TicketLeaf* ticket);
 };
 
 
