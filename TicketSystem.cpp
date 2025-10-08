@@ -10,11 +10,11 @@ TicketSystem::~TicketSystem(){
 }
 
 
-void TicketSystem::print(){
+// void TicketSystem::print(){
     
-}
+// }
 
 
-void TicketSystem::add(TicketSystem* item){
+// void TicketSystem::add(TicketSystem* item){
     
-}
+// }

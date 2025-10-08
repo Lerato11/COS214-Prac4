@@ -5,11 +5,11 @@ TicketCommand::TicketCommand(){
 }
 
 
-void TicketCommand::execute(std::string id, std::string info){
+// void TicketCommand::execute(std::string id, std::string info){
     
-}
+// }
 
 
-std::string TicketCommand::getType(){
+// std::string TicketCommand::getType(){
     
-}
+// }

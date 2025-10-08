@@ -1,6 +1,6 @@
 #include "TicketInformation.h"
 
-TicketInformation::TicketInformation(){
+TicketInformation::TicketInformation() : id(""), info(""){
     // this->info = "";
     // this->id = "";
 }

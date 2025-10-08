@@ -29,41 +29,44 @@ void Director::setGeneralTickets(std::vector<TicketInformation*> generalTickets)
 }
 
 TicketSystem* Director::construct(){
-    SystemMaker* newTicketSystem = new TicketSystemMaker();
+    maker->reset();
 
-    if (financeTickets.size() > 0){
-        newTicketSystem->addCategory("Finance");
+
+    if (!financeTickets.empty()){
+        maker->addCategory("Finance");
 
         std::vector<TicketInformation*>::iterator it;
 
         for (it = this->financeTickets.begin(); it != this->financeTickets.end(); ++it){
-            newTicketSystem->addFinanceTicket((*it)->getId(), (*it)->getInfo());
+            maker->addFinanceTicket((*it)->getId(), (*it)->getInfo());
         
         }
 
     } 
 
-    if (techTickets.size() > 0){
-        newTicketSystem->addCategory("Tech");
+    if (!techTickets.empty()){
+        maker->addCategory("Tech");
 
         std::vector<TicketInformation*>::iterator it;
 
         for (it = this->techTickets.begin(); it != this->techTickets.end(); ++it){
-            newTicketSystem->addTechTicket((*it)->getId(), (*it)->getInfo());
+            maker->addTechTicket((*it)->getId(), (*it)->getInfo());
         
         }
 
     } 
 
-        if (generalTickets.size() > 0){
-        newTicketSystem->addCategory("General");
+    if (!generalTickets.empty()){
+        maker->addCategory("General");
 
         std::vector<TicketInformation*>::iterator it;
 
         for (it = this->generalTickets.begin(); it != this->generalTickets.end(); ++it){
-            newTicketSystem->addGeneralTicket((*it)->getId(), (*it)->getInfo());
+            maker->addGeneralTicket((*it)->getId(), (*it)->getInfo());
         
         }
 
     } 
+
+    return maker->getTicketSystem();
 }

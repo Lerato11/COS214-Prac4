@@ -31,16 +31,16 @@ void TicketCategory::add(TicketSystem* item){
 
 void TicketCategory::print(){
 
-    std::vector<TicketSystem*>::iterator it;
+    // std::vector<TicketSystem*>::iterator it;
 
     std::cout << "[" << this->getName() << ": (" << std::endl;
 
-    for (it = this->children.begin(); it != this->children.end(); ++it){
-        (*it)->print();
+    for (size_t i = 0; i < children.size(); ++i) {
+        children[i]->print();
 
-            if (it != children.end()){
-                std::cout << ", ";
-            }
+        if (i != children.size() - 1){
+            std::cout << ", ";
+        }
     }
 
     std::cout << ")]" << std::endl;

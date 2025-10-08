@@ -6,13 +6,14 @@ TicketSystemMaker::TicketSystemMaker(): root(NULL), currentCategory(NULL){
 
 void TicketSystemMaker::reset(){
 
-    if (currentCategory && root && currentCategory != root){
-        delete currentCategory;
-    }
-
-    // if (root){
-        delete root;
+    // if (currentCategory && root && currentCategory != root){
+    //     delete currentCategory;
     // }
+
+    if (root){
+        delete root;
+        root = NULL;
+    }
 
     
     root = new TicketCategory("root");

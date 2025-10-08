@@ -10,16 +10,15 @@ class TicketCommand;
 
 class Support
 {
-private:
-    Support* next;
-
 protected:
-    virtual void support(TicketLeaf* ticket);
+    Support* next;
 
 public:
     Support();
-    ~Support();
+    virtual ~Support();
     void setNext(Support* next);
+    virtual void support(TicketLeaf* ticket);
+
 };
 
 

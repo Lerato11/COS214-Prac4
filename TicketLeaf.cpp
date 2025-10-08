@@ -6,7 +6,11 @@ TicketLeaf::TicketLeaf(std::string id, std::string info) : id(id), info(info){
 
 
 TicketLeaf::~TicketLeaf(){
+    // if (cmd != NULL) {
 
+    //     delete cmd;
+    //     cmd = NULL;
+    // }
 }
 
 
@@ -19,9 +23,6 @@ std::string TicketLeaf::getInfo(){
     return this->info;
 }
 
-std::string TicketLeaf::getInfo(){
-    return this->info;
-}
 
 TicketCommand* TicketLeaf::getCmd(){
     return this->cmd;
