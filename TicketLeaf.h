@@ -23,7 +23,7 @@ public:
     TicketCommand* getCmd();
     void setCmd(TicketCommand*);
 
-    void add(TicketSystem*);
+    void add(TicketSystem*); // <<-- stub
     
     void print();
 };
